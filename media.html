@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LearnFlix | Media and Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/layout-polish.css" />
+  </head>
+  <body>
+    <aside
+      class="sidebar offcanvas-lg offcanvas-start"
+      tabindex="-1"
+      id="learnflixSidebar"
+      aria-label="LearnFlix navigation"
+    >
+      <div class="offcanvas-header">
+        <a class="brand" href="index.html">Learn<span>Flix</span></a
+        ><button
+          type="button"
+          class="btn-close btn-close-white d-lg-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close navigation"
+        ></button>
+      </div>
+      <nav class="sidebar-nav offcanvas-body">
+        <a class="side-link" href="index.html"
+          ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5M5.5 9v11h13V9M9 20v-6h6v6" /></svg
+          ><span>Home</span></a
+        ><a class="side-link active" href="media.html" aria-current="page"
+          ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 5h16M4 12h16M4 19h16" /></svg
+          ><span>Browse</span></a
+        ><a class="side-link" href="index.html#my-list"
+          ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 4h12v17l-6-4-6 4z" /></svg
+          ><span>My List</span></a
+        ><a class="side-link" href="media.html#continue"
+          ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 3v18l15-9z" /></svg
+          ><span>Continue Learning</span></a
+        ><a class="side-link" href="index.html#progress"
+          ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 19V5m0 14h17M8 16v-4m5 4V8m5 8V4" /></svg
+          ><span>Progress</span></a
+        ><a class="side-link" href="register.html#settings"
+          ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-8 9c.5-4 3-6 8-6s7.5 2 8 6"
+            /></svg
+          ><span>Settings</span></a
+        >
+        <p class="sidebar-note">A learning library for curious minds</p>
+      </nav>
+    </aside>
+    <header class="media-header">
+      <div>
+        <p class="kicker">LearnFlix lesson library</p>
+        <h1>Media and lesson information</h1>
+      </div>
+      <button
+        class="btn btn-outline-light menu-button d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#learnflixSidebar"
+        aria-controls="learnflixSidebar"
+      >
+        Menu
+      </button>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="media.html" aria-current="page">Media and Info</a>
+        <a href="register.html">Register</a>
+      </nav>
+      <div class="topbar-tools">
+        <label class="header-search"
+          ><span class="visually-hidden">Search lessons</span
+          ><input
+            type="search"
+            placeholder="Search lessons or instructors"
+            aria-label="Search lessons or instructors" /></label
+        ><a
+          class="profile"
+          href="register.html"
+          aria-label="Open learner profile"
+          >S</a
+        >
+      </div>
+    </header>
+
+    <main class="media-layout">
+      <section class="lesson-panel" aria-labelledby="lesson-title">
+        <div class="video-wrap" id="continue">
+          <span class="lesson-badge">Sample lesson</span>
+          <div
+            class="youtube-playlist"
+            id="active-youtube-player"
+            aria-label="LearnFlix educational lesson playlist"
+          ></div>
+          <video
+            class="youtube-playlist local-library-player"
+            id="active-local-player"
+            controls
+            playsinline
+            preload="metadata"
+            hidden
+            aria-label="Selected local lesson video"
+          >
+            <source id="active-local-source" src="" type="video/mp4" />
+            Your browser cannot play this video.
+          </video>
+        </div>
+        <a
+          class="source-fallback"
+          id="source-fallback"
+          href="https://www.youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open this playlist on YouTube</a
+        >
+        <section
+          class="playlist-queue"
+          id="playlist-queue"
+          aria-labelledby="playlist-queue-title"
+        >
+          <div class="playlist-queue-heading">
+            <h3 id="playlist-queue-title">Playlist lessons</h3>
+            <span id="playlist-count" class="playlist-count">Loading…</span>
+          </div>
+          <p id="playlist-status" class="playlist-status" aria-live="polite">
+            Loading the playlist lesson list…
+          </p>
+          <ol
+            class="playlist-items"
+            id="playlist-items"
+            aria-label="Lessons in selected playlist"
+          ></ol>
+        </section>
+        <h2 id="lesson-title">Sigma Web Development Course</h2>
+        <p id="lesson-summary">
+          The CodeWithHarry Sigma playlist is loaded above. Pick another course
+          below to switch the player. YouTube provides the video stream;
+          LearnFlix organizes lessons but does not host or upload them.
+        </p>
+        <div
+          class="selected-course-meta"
+          id="selected-course-meta"
+          aria-live="polite"
+        >
+          <span>Category: Web Development</span
+          ><span>Level: Beginner to intermediate</span
+          ><span>Source: YouTube playlist</span>
+        </div>
+        <div class="audio-box">
+          <h3>Audio introduction</h3>
+          <audio controls preload="metadata">
+            <source src="media/sample-intro.wav" type="audio/wav" />
+            Your browser cannot play this audio. Open the project in a modern
+            browser.
+          </audio>
+        </div>
+        <section class="local-video-card" aria-labelledby="html-video-title">
+          <h3 id="html-video-title">Want to use a video from your computer?</h3>
+          <p>
+            Copy a video you own or have permission to use into the project’s
+            <code>media/</code> folder, then add its relative path as a
+            <code>local-video</code> entry in
+            <code>js/content-library.js</code>. Include the media file when you
+            submit the project.
+          </p>
+        </section>
+      </section>
+
+      <aside class="info-panel" aria-labelledby="info-title">
+        <img
+          class="info-image"
+          src="images/learnflix-hero.svg"
+          alt="LearnFlix course player illustration"
+        />
+        <h2 id="info-title">About this lesson</h2>
+        <p class="summary">
+          A beginner-friendly overview of page structure and the role of HTML.
+        </p>
+        <h3>What you will explore</h3>
+        <ol>
+          <li>What an HTML document contains</li>
+          <li>How headings and paragraphs organize content</li>
+          <li>Where CSS and JavaScript fit</li>
+        </ol>
+        <h3>Before you start</h3>
+        <ul>
+          <li>Use a modern web browser</li>
+          <li>Pause and replay sections as needed</li>
+          <li>Take notes on new terms</li>
+        </ul>
+        <div class="table-scroll">
+          <table>
+            <caption>
+              Lesson details
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Topic</th>
+                <td>HTML foundations</td>
+              </tr>
+              <tr>
+                <th scope="row">Level</th>
+                <td>Beginner</td>
+              </tr>
+              <tr>
+                <th scope="row">Length</th>
+                <td>8 minutes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+
+      <section class="library-browser" aria-labelledby="library-title">
+        <div class="library-heading">
+          <div>
+            <p class="eyebrow">Curated learning</p>
+            <h2 id="library-title">Browse courses</h2>
+            <p>
+              Each course belongs to one category and points to a video playlist
+              or a local video file.
+            </p>
+          </div>
+          <label class="category-filter" for="category-filter"
+            >Category<select id="category-filter">
+              <option value="all">All categories</option>
+            </select></label
+          >
+        </div>
+        <label class="library-search" for="library-search"
+          >Search courses<input
+            id="library-search"
+            type="search"
+            placeholder="Search by course, topic, or level"
+        /></label>
+        <div class="course-grid" id="course-grid" aria-live="polite"></div>
+        <p class="library-note" id="library-status">
+          Loading available courses…
+        </p>
+        <details class="content-guidance">
+          <summary>How the course library is maintained</summary>
+          <p>
+            For this client-side project, course entries live in one JavaScript
+            file. Add a course there with a unique ID, title, category, level,
+            description, and source. Use a YouTube playlist ID for an online
+            playlist, or a project-relative MP4 path for a local video. The page
+            creates the category filter and course cards from that list.
+          </p>
+          <p>
+            There is no server or admin upload screen in this version. Updating
+            the library means editing the file and sharing the updated project
+            folder. YouTube videos require an internet connection and may be
+            unavailable if their owner blocks embedding or removes them. Preview
+            the site through a local web server such as VS Code Live Server;
+            embedded playback can fail when a page is opened directly as a local
+            file.
+          </p>
+        </details>
+      </section>
+    </main>
+    <footer><a href="index.html">Back to LearnFlix home</a></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/content-library.js"></script>
+  </body>
+</html>
