@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">LearnFlix featured course</title>
+  <desc id="desc">A dark course player illustration with a featured web development lesson, playlist details, a crimson play button, and a progress bar.</desc>
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#25282e"/>
+      <stop offset="1" stop-color="#151619"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E01B3C"/>
+      <stop offset="1" stop-color="#A80D26"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="540" rx="30" fill="#08090A"/>
+  <rect x="26" y="24" width="848" height="492" rx="24" fill="#121316" stroke="#30333a" stroke-width="2"/>
+
+  <!-- Compact application header -->
+  <path d="M50 24h800a24 24 0 0 1 24 24v42H26V48a24 24 0 0 1 24-24Z" fill="#191b1f"/>
+  <circle cx="55" cy="58" r="7" fill="#C8102E"/>
+  <circle cx="79" cy="58" r="5" fill="#51545b"/>
+  <circle cx="99" cy="58" r="5" fill="#51545b"/>
+  <text x="132" y="64" fill="#F4F5F7" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="1.2">LEARNFLIX</text>
+  <text x="746" y="63" fill="#A9B0BD" font-family="Arial,sans-serif" font-size="12" text-anchor="end">YOUR NEXT LESSON</text>
+  <circle cx="821" cy="58" r="16" fill="#E8CFA0"/>
+  <text x="821" y="63" fill="#121316" font-family="Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle">L</text>
+
+  <!-- Featured lesson thumbnail -->
+  <rect x="50" y="112" width="520" height="315" rx="16" fill="url(#screen)" stroke="#30333a" stroke-width="2"/>
+  <path d="M50 320 188 197l95 83 102-120 185 159v92H50Z" fill="#22252b"/>
+  <path d="m50 356 136-114 97 88 97-95 190 157v35H50Z" fill="#2b2e35"/>
+  <path d="M50 357 186 242l97 88 97-95 99 82v110H50Z" fill="#1b1d21"/>
+  <rect x="73" y="132" width="140" height="28" rx="14" fill="#08090A" stroke="#3b3e45"/>
+  <circle cx="91" cy="146" r="4" fill="#FF6B7F"/>
+  <text x="104" y="150" fill="#F4F5F7" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing=".6">FEATURED LESSON</text>
+
+  <!-- Play control -->
+  <circle cx="310" cy="268" r="47" fill="url(#accent)"/>
+  <path d="M300 245v46l37-23z" fill="#fff"/>
+
+  <!-- Course details -->
+  <rect x="590" y="112" width="260" height="315" rx="16" fill="#1B1D21" stroke="#30333a" stroke-width="2"/>
+  <text x="614" y="151" fill="#FF6B7F" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">CONTINUE LEARNING</text>
+  <text x="614" y="190" fill="#F4F5F7" font-family="Georgia,serif" font-size="25" font-weight="700">Web</text>
+  <text x="614" y="220" fill="#F4F5F7" font-family="Georgia,serif" font-size="25" font-weight="700">development</text>
+  <text x="614" y="258" fill="#A9B0BD" font-family="Arial,sans-serif" font-size="13">HTML · CSS · JavaScript</text>
+  <rect x="614" y="286" width="112" height="26" rx="13" fill="#302027" stroke="#6b2937"/>
+  <text x="670" y="303" fill="#FF9BA9" font-family="Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">BEGINNER</text>
+  <path d="M614 344h212" stroke="#363940" stroke-width="2"/>
+  <text x="614" y="374" fill="#A9B0BD" font-family="Arial,sans-serif" font-size="12">A little progress adds up.</text>
+
+  <!-- Course progress -->
+  <text x="52" y="467" fill="#F4F5F7" font-family="Arial,sans-serif" font-size="12" font-weight="700">YOUR LEARNING, AT YOUR PACE</text>
+  <text x="847" y="467" fill="#A9B0BD" font-family="Arial,sans-serif" font-size="12" text-anchor="end">LESSON 03</text>
+  <rect x="52" y="482" width="795" height="7" rx="3.5" fill="#30333a"/>
+  <rect x="52" y="482" width="248" height="7" rx="3.5" fill="#C8102E"/>
+  <circle cx="300" cy="485.5" r="7" fill="#E8CFA0"/>
+</svg>
