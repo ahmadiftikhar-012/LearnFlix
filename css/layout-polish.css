@@ -716,13 +716,50 @@ main.register-main {
 }
 
 /* Final guard: the fixed sidebar owns the left column on every page. */
+.site-header > .brand,
+.media-header > .brand,
+.register-header > .brand {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 9px;
+  color: var(--lf-text) !important;
+  font-size: 1.08rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-header > .brand img,
+.media-header > .brand img,
+.register-header > .brand img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+.site-header > .brand .brand-learn,
+.media-header > .brand .brand-learn,
+.register-header > .brand .brand-learn {
+  color: var(--lf-text) !important;
+}
+.site-header > .brand .brand-flix,
+.media-header > .brand .brand-flix,
+.register-header > .brand .brand-flix {
+  margin-left: -9px;
+  color: var(--lf-rose) !important;
+}
 body > .site-header,
 body > .media-header,
 body > .register-header {
   margin-left: calc(var(--layout-sidebar) + var(--layout-gutter)) !important;
 }
 body > main:not(.register-main) {
-  margin-left: var(--layout-sidebar) !important;
+  margin-left: calc(var(--layout-sidebar) + var(--layout-gutter)) !important;
+}
+body > .site-footer {
+  margin-left: calc(var(--layout-sidebar) + var(--layout-gutter)) !important;
+}
+body > .media-layout ~ footer {
+  margin-left: calc(var(--layout-sidebar) + var(--layout-gutter));
 }
 body > main.register-main {
   width: min(
@@ -741,6 +778,12 @@ body > main.register-main {
   }
   body > main:not(.register-main) {
     margin-left: 0 !important;
+  }
+  body > .site-footer {
+    margin-left: var(--layout-gutter) !important;
+  }
+  body > .media-layout ~ footer {
+    margin-left: var(--layout-gutter);
   }
   body > main.register-main {
     width: calc(100vw - 2 * var(--layout-gutter)) !important;
