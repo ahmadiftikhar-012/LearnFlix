@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Search and filter LearnFlix courses, then watch public YouTube videos and playlists in the lesson player."
+    />
+    <meta name="theme-color" content="#08090a" />
     <title>LearnFlix | Media and Info</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +55,7 @@
         >
         <a class="side-link" href="portfolio.html"><span>Portfolio</span></a>
         <a class="side-link" href="contact.html"><span>Contact</span></a>
-        ><a class="side-link" href="index.html#my-list"
+        <a class="side-link" href="index.html#my-list"
           ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M6 4h12v17l-6-4-6 4z" /></svg
           ><span>My List</span></a
@@ -100,17 +105,27 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="topbar-tools">
-        <label class="header-search"
-          ><span class="visually-hidden">Search lessons</span
-          ><input
+        <form
+          class="header-search"
+          role="search"
+          action="media.html#library-title"
+          method="get"
+        >
+          <label class="visually-hidden" for="header-search"
+            >Search lessons or instructors</label
+          >
+          <input
+            id="header-search"
+            name="q"
             type="search"
             placeholder="Search lessons or instructors"
-            aria-label="Search lessons or instructors" /></label
-        ><a
+          />
+        </form>
+        <a
           class="profile"
           href="register.html"
           aria-label="Open learner profile"
-          >S</a
+          >A</a
         >
       </div>
     </header>
@@ -204,17 +219,19 @@
           src="images/learnflix-hero.svg"
           alt="LearnFlix course player illustration"
         />
-        <h2 id="info-title">About this lesson</h2>
+        <h2 id="info-title">About this library</h2>
         <p class="summary">
-          A beginner-friendly overview of page structure and the role of HTML.
+          LearnFlix brings curated educational videos together in one searchable
+          library. Video playback is provided by YouTube or by an included local
+          media file.
         </p>
-        <h3>What you will explore</h3>
+        <h3>What you can explore</h3>
         <ol>
-          <li>What an HTML document contains</li>
-          <li>How headings and paragraphs organize content</li>
-          <li>Where CSS and JavaScript fit</li>
+          <li>Web development and programming</li>
+          <li>AI, machine learning, and data science</li>
+          <li>Cybersecurity fundamentals</li>
         </ol>
-        <h3>Before you start</h3>
+        <h3>Before you watch</h3>
         <ul>
           <li>Use a modern web browser</li>
           <li>Pause and replay sections as needed</li>
@@ -223,7 +240,7 @@
         <div class="table-scroll">
           <table>
             <caption>
-              Lesson details
+              Example lesson details
             </caption>
             <thead>
               <tr>
@@ -255,8 +272,8 @@
             <p class="eyebrow">Curated learning</p>
             <h2 id="library-title">Browse courses</h2>
             <p>
-              Each course belongs to one category and points to a video playlist
-              or a local video file.
+              Each course belongs to one category and links to a YouTube video,
+              playlist, or local video file.
             </p>
           </div>
           <label class="category-filter" for="category-filter"

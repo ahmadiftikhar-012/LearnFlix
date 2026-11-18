@@ -528,6 +528,12 @@ input[readonly] {
 .consent {
   margin: 1rem 0;
 }
+.register-feedback {
+  min-height: 1.4em;
+  margin: 0 0 0.75rem;
+  color: var(--lf-sand);
+  font-size: 0.9rem;
+}
 .register-form button {
   min-width: 190px;
   min-height: 44px;

@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Learn about the LearnFlix student project and try its client-side contact form demonstration."
+    />
+    <meta name="theme-color" content="#08090a" />
     <title>LearnFlix | About and Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -122,6 +127,7 @@
                 name="name"
                 type="text"
                 autocomplete="name"
+                aria-describedby="name-error"
                 minlength="2"
                 maxlength="60"
                 required
@@ -135,6 +141,7 @@
                 name="email"
                 type="email"
                 autocomplete="email"
+                aria-describedby="email-error"
                 required
               />
               <span class="field-error" id="email-error"></span>
@@ -145,6 +152,7 @@
                 id="contact-message"
                 name="message"
                 rows="4"
+                aria-describedby="message-error"
                 minlength="10"
                 maxlength="500"
                 required

@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore LearnFlix, a student-built library for finding and watching educational videos by subject."
+    />
+    <meta name="theme-color" content="#08090a" />
     <title>LearnFlix | Learn something new</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +55,7 @@
         >
         <a class="side-link" href="portfolio.html"><span>Portfolio</span></a>
         <a class="side-link" href="contact.html"><span>Contact</span></a>
-        ><a class="side-link" href="index.html#my-list"
+        <a class="side-link" href="index.html#my-list"
           ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M6 4h12v17l-6-4-6 4z" /></svg
           ><span>My List</span></a
@@ -96,17 +101,27 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="topbar-tools">
-        <label class="header-search"
-          ><span class="visually-hidden">Search lessons</span
-          ><input
+        <form
+          class="header-search"
+          role="search"
+          action="media.html#library-title"
+          method="get"
+        >
+          <label class="visually-hidden" for="header-search"
+            >Search lessons or instructors</label
+          >
+          <input
+            id="header-search"
+            name="q"
             type="search"
             placeholder="Search lessons or instructors"
-            aria-label="Search lessons or instructors" /></label
-        ><a
+          />
+        </form>
+        <a
           class="profile"
           href="register.html"
           aria-label="Open learner profile"
-          >S</a
+          >A</a
         >
       </div>
     </header>
@@ -245,8 +260,9 @@
           <article>
             <h3>Choose a category</h3>
             <p>
-              Browse subjects such as programming, design, and study skills.
-              Each course is tagged with a category and level.
+              Browse Web Development, AI and Machine Learning, Data Science,
+              and Cyber Security. Each course is tagged with a category and
+              level.
             </p>
           </article>
           <article>

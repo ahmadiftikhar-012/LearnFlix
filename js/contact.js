@@ -20,11 +20,16 @@ const contactFields = [
 ];
 
 function updateFieldMessage(field) {
-  field.error.textContent = field.input.validity.valid ? "" : field.message;
+  const isValid = field.input.validity.valid;
+  field.input.setAttribute("aria-invalid", String(!isValid));
+  field.error.textContent = isValid ? "" : field.message;
 }
 
 contactFields.forEach((field) => {
-  field.input.addEventListener("input", () => updateFieldMessage(field));
+  field.input.addEventListener("input", () => {
+    formFeedback.textContent = "";
+    updateFieldMessage(field);
+  });
   field.input.addEventListener("blur", () => updateFieldMessage(field));
 });
 
@@ -41,5 +46,8 @@ contactForm.addEventListener("submit", (event) => {
   formFeedback.textContent =
     "Thanks! Your message passed the demo check. It has not been sent to a server.";
   contactForm.reset();
-  contactFields.forEach(updateFieldMessage);
+  contactFields.forEach(({ input, error }) => {
+    input.removeAttribute("aria-invalid");
+    error.textContent = "";
+  });
 });

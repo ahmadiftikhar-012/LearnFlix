@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore a sample learner profile form with HTML controls, browser validation, and a client-side preview."
+    />
+    <meta name="theme-color" content="#08090a" />
     <title>LearnFlix | Register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,7 +55,7 @@
         >
         <a class="side-link" href="portfolio.html"><span>Portfolio</span></a>
         <a class="side-link" href="contact.html"><span>Contact</span></a>
-        ><a class="side-link" href="index.html#my-list"
+        <a class="side-link" href="index.html#my-list"
           ><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M6 4h12v17l-6-4-6 4z" /></svg
           ><span>My List</span></a
@@ -99,17 +104,27 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="topbar-tools">
-        <label class="header-search"
-          ><span class="visually-hidden">Search lessons</span
-          ><input
+        <form
+          class="header-search"
+          role="search"
+          action="media.html#library-title"
+          method="get"
+        >
+          <label class="visually-hidden" for="header-search"
+            >Search lessons or instructors</label
+          >
+          <input
+            id="header-search"
+            name="q"
             type="search"
             placeholder="Search lessons or instructors"
-            aria-label="Search lessons or instructors" /></label
-        ><a
+          />
+        </form>
+        <a
           class="profile"
           href="register.html"
           aria-label="Open learner profile"
-          >S</a
+          >A</a
         >
       </div>
     </header>
@@ -128,7 +143,7 @@
         </p>
       </section>
 
-      <form class="register-form" id="settings" action="#" method="get">
+      <form class="register-form" id="settings">
         <div class="form-grid">
           <div class="field-group">
             <label class="required" for="full-name">Full name</label>
@@ -136,6 +151,7 @@
               id="full-name"
               name="full-name"
               type="text"
+              autocomplete="name"
               required
               minlength="2"
               maxlength="60"
@@ -148,6 +164,7 @@
               id="email"
               name="email"
               type="email"
+              autocomplete="email"
               required
               placeholder="you@example.com"
             />
@@ -158,6 +175,7 @@
               id="password"
               name="password"
               type="password"
+              autocomplete="new-password"
               required
               minlength="8"
               maxlength="24"
@@ -228,8 +246,8 @@
             />
           </div>
           <div class="field-group">
-            <label for="account-type">Learning goal</label>
-            <select id="account-type" name="account-type" required>
+            <label for="learning-goal">Learning goal</label>
+            <select id="learning-goal" name="learning-goal" required>
               <option value="" disabled selected>Choose a goal</option>
               <option value="school">Support my studies</option>
               <option value="career">Build career skills</option>
@@ -281,12 +299,16 @@
             development</label
           >
           <label class="choice"
-            ><input type="checkbox" name="topics" value="design" />
-            Design</label
+            ><input type="checkbox" name="topics" value="ai-ml" /> AI and
+            Machine Learning</label
           >
           <label class="choice"
-            ><input type="checkbox" name="topics" value="science" />
-            Science</label
+            ><input type="checkbox" name="topics" value="data-science" />
+            Data Science</label
+          >
+          <label class="choice"
+            ><input type="checkbox" name="topics" value="cyber-security" />
+            Cyber Security</label
           >
         </fieldset>
 
@@ -314,6 +336,12 @@
           ><input type="checkbox" name="consent" required /> I understand this
           is a demo form and my information will not be submitted.</label
         >
+        <p
+          class="register-feedback"
+          id="register-feedback"
+          role="status"
+          aria-live="polite"
+        ></p>
         <button type="submit">Preview form submission</button>
       </form>
     </main>
@@ -324,5 +352,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="js/register.js"></script>
   </body>
 </html>

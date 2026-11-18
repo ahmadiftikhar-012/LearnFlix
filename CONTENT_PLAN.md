@@ -1,14 +1,33 @@
 # LearnFlix content plan
 
-## What the project supports now
+## Current behavior
 
-LearnFlix is a static, client-side prototype built with HTML, CSS, Bootstrap, and JavaScript. The Media page reads a small catalogue from `js/content-library.js`, creates searchable course cards and category filters, and loads the selected course into the player. For YouTube playlists, the YouTube IFrame Player API also supplies the ordered video IDs for an on-page, scrollable lesson selector; selecting a lesson plays it in the embedded player. The selector shows lesson numbers and thumbnails because this prototype does not use the YouTube Data API to retrieve every video title.
+LearnFlix is a static, client-side prototype built with HTML, CSS, Bootstrap,
+and JavaScript. The Media page reads its catalogue from
+`js/content-library.js`, renders searchable course cards, creates category
+filters, and loads the selected course into the player.
 
-The starter catalogue contains curated entries in four learning areas: Web Development, AI & Machine Learning, Data Science, and Cyber Security. It retains the supplied Sigma Web Development playlist and includes beginner and intermediate courses from CodeWithHarry, freeCodeCamp, 3Blue1Brown, Harvard CS50, and Professor Messer. YouTube serves these sources through its embedded player; LearnFlix does not download or store the streams. A short local WAV narration is included for the HTML audio control. Preview through a local web server such as VS Code Live Server. YouTube's embed documentation requires a valid HTTP Referer for playback, so opening the HTML directly as a `file://` URL can cause an embed error. If embedding is blocked, the player has an “Open on YouTube” fallback.
+For YouTube playlists, the YouTube IFrame Player API supplies the ordered video
+IDs for a scrollable lesson selector. Selecting an item plays it in the
+embedded player. The selector displays lesson numbers and thumbnails; this
+prototype does not use the YouTube Data API to retrieve video titles.
 
-## How to add a course
+The catalogue covers Web Development, AI & Machine Learning, Data Science, and
+Cyber Security. It includes the supplied Sigma Web Development playlist and
+courses from CodeWithHarry, freeCodeCamp, 3Blue1Brown, Harvard CS50, and
+Professor Messer. YouTube serves the video streams; LearnFlix does not download
+or store them. The Media page also uses a short local WAV narration for its
+audio control.
 
-Add a JavaScript object to `learnFlixCourses` in `js/content-library.js`:
+Preview the site through a local web server such as VS Code Live Server.
+YouTube playback requires an internet connection and may fail when a video
+owner blocks embedding, removes a video, or limits its availability. Opening
+the project through a `file://` URL can also prevent embedded playback. The
+player includes an “Open on YouTube” fallback.
+
+## Add a course
+
+Add an object to `learnFlixCourses` in `js/content-library.js`:
 
 ```js
 {
@@ -24,18 +43,31 @@ Add a JavaScript object to `learnFlixCourses` in `js/content-library.js`:
 }
 ```
 
-Supported source types are `youtube-playlist` (playlist ID), `youtube-video` (video ID), and `local-video` (relative MP4 path). Use a short title, accurate category and level, and a description that explains the learning outcome. Keep one course per playlist or lesson sequence so categories and course cards remain clear.
+Supported `sourceType` values are `youtube-playlist`, `youtube-video`, and
+`local-video`. For a local video, set `source` to a project-relative MP4 path.
+Choose a unique ID and use one of the catalogue's category labels:
+`Web Development`, `AI & Machine Learning`, `Data Science`, or
+`Cyber Security`. Write a short description that explains the course's focus.
 
-## Organizing and reviewing content
+## Organize and review courses
 
-1. Group related lessons into a playlist on YouTube or a project folder.
-2. Choose one consistent category label, such as `Programming`, `Design`, or `Study Skills`.
-3. Add the course metadata and source to the JavaScript catalogue.
-4. Verify the source is public/embeddable or that the MP4 is included in the project folder.
-5. Test the category filter, search, and playback, then update the project ZIP.
+1. Group related lessons in a YouTube playlist or project folder.
+2. Choose the matching category and identify the course's level.
+3. Add its metadata and source to the JavaScript catalogue.
+4. Confirm that the source is public and embeddable, or include the permitted
+   MP4 in the project folder.
+5. Review search, category filtering, and playback, then share the updated
+   project folder.
 
-For local videos, put the permitted MP4 inside `media/` and set a relative path such as `media/html-basics.mp4`. Include the file in the submitted project. A path from the developer's personal computer will not work on another user's device.
+For local lessons, place the permitted MP4 in `media/` and set a path such as
+`media/html-basics.mp4`. Do not use a path that points to a file on your own
+computer.
 
-## Limits of this assignment stack
+## Limits of this project stack
 
-There is no database, server-side upload, admin dashboard, or secure account system. Editing the catalogue means editing `js/content-library.js` and sharing a new project copy. YouTube playback needs an internet connection, and a video may refuse embedding, be removed, or be region-limited. A local MP4 works only when distributed with the site. A future production platform would need a backend, storage/streaming service, access controls, and a database.
+The prototype has no database, server-side upload feature, admin dashboard, or
+secure account system. Updating the catalogue means editing
+`js/content-library.js` and sharing an updated project copy. A local MP4 works
+only when the file is distributed with the site. A production learning
+platform would need a backend, database, media storage and streaming, and
+access controls.

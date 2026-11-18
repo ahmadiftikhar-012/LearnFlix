@@ -1,35 +1,58 @@
 # LearnFlix
 
-LearnFlix is a client-side learning library prototype with a dark crimson theme. It organizes video lessons into categories and provides course search, category filtering, and an embedded YouTube player with a playlist selector.
+LearnFlix is a front-end learning library prototype with a black, crimson, and
+warm-gold theme inspired by streaming services. It organizes educational videos
+into subject areas and lets visitors search, filter, and watch public YouTube
+videos or playlists in an embedded player.
 
-## Theme and technology
+## Technology and scope
 
-- **Theme:** An educational streaming-style library for learners.
-- **Technology:** HTML, CSS, Bootstrap, and JavaScript.
-- **Content:** YouTube videos and playlists play through YouTube's embedded player. A local video can be added in the project's `media/` folder. The site has no server, database, or account backend.
+- **Stack:** HTML, CSS, Bootstrap, and JavaScript.
+- **Video sources:** Public YouTube embeds; permitted local MP4 files can be added to `media/`.
+- **Architecture:** Static, client-side prototype. It has no server, database, account system, or upload service.
 
-## Project pages
+## Pages
 
-1. **Home** — `index.html`; introduces LearnFlix and links to learning content.
-2. **Media and Info** — `media.html`; demonstrates video and audio, lists, a lesson-details table, and the course library.
-3. **Register** — `register.html`; demonstrates form inputs and browser validation.
+| Page | File | Purpose |
+| --- | --- | --- |
+| Home | `index.html` | Introduces the project and links to learning topics. |
+| Media and Info | `media.html` | Demonstrates media elements, lesson information, course search, category filters, and the video player. |
+| Register | `register.html` | Demonstrates HTML form controls, browser validation, and a local profile preview; it does not create an account. |
+| Learning Paths | `services.html` | Groups subjects into responsive learning-path cards. |
+| Portfolio | `portfolio.html` | Presents a captioned gallery using CSS Grid and animation. |
+| Contact | `contact.html` | Describes the project and demonstrates client-side form feedback. |
 
-4. **Learning Paths** — `services.html`; presents subject areas as responsive Flexbox cards.
-5. **Portfolio** — `portfolio.html`; shows a captioned image gallery using CSS Grid and keyframe animation.
-6. **Contact** — `contact.html`; includes an About section, responsive contact form, and client-side form feedback.
+Each page has its own stylesheet in `css/`. Course data, search, filtering, and
+player selection are in `js/content-library.js`. The Contact and Register form
+demonstrations use `js/contact.js` and `js/register.js`.
 
-Each page links its own stylesheet in `css/`. The course entries and client-side search/filter behavior are in `js/content-library.js`; the contact form interaction is in `js/contact.js`.
+## AI use log
 
-## AI usage log
+**Tool:** OpenAI Codex
 
-| Tool         | What I asked                                                                                                                                                                                                                                                                                | What changed / learning plan                                                                                                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI Codex | Brainstorm a project theme, discuss page layout and color choices, draft course descriptions, explain HTML/CSS/JavaScript concepts, and help implement and refine project pages and interactions, including the JavaScript course search and category filter and Assignment 2 page layouts. | LearnFlix's layout, theme, descriptions, pages, and some code and interactions were developed with AI assistance. I plan to study the search/filter component so I can explain how it works and recreate it myself. |
+**Prompt and tasks:** Brainstorm project ideas; explore page layouts and colors;
+draft course descriptions; explain HTML, CSS, and JavaScript logic and syntax;
+help implement and refine the pages and interactions.
 
-## Teacher approval evidence
+**Changes and learning:** AI helped shape the theme, page layouts, descriptions,
+and several code interactions. The complete `js/content-library.js` file was
+generated with AI as an extra feature to organize course data and support course
+cards, category search, filters, and video selection. AI also helped implement
+the Contact form feedback and the Register form's local preview. I plan to study
+these interactions so I can explain how they work.
 
-Not added yet. Add the teacher-approved plan or a link to the approval email/screenshot here before submission.
+## Instructor approval
+
+Approval evidence: **Pending instructor approval.** Add the approved proposal or an instructor-approved email/link here when available.
 
 ## Run locally
 
-Open the project folder in VS Code and use Live Server to serve `index.html`. YouTube playback requires an internet connection. Opening the pages directly with a `file://` URL may prevent embedded playback.
+Open the project folder in VS Code and use Live Server to serve `index.html`.
+YouTube playback needs an internet connection and may be unavailable when a
+video owner blocks embedding or removes a video. A local MP4 must be included in
+the project folder to play on another device. Opening pages directly as `file://`
+can prevent YouTube embeds from working.
+
+## GitHub Pages
+
+The project can be published as a static site. In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/(root)`, then save. GitHub Pages does not provide a backend for real accounts, uploads, or shared progress.

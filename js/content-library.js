@@ -348,6 +348,9 @@ function renderCourses() {
 }
 
 function initializeLibrary() {
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery) librarySearch.value = initialQuery;
+
   [...new Set(learnFlixCourses.map((course) => course.category))]
     .sort()
     .forEach((category) => {
