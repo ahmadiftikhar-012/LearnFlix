@@ -1,0 +1,170 @@
+/* Shared navigation and header structure used by Assignment 2 pages. */
+.sidebar {
+  position: fixed;
+  z-index: 1045;
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 100vh;
+  padding: 1.25rem 0.9rem;
+  border-right: 1px solid var(--lf-line);
+  background: var(--lf-side);
+  color: var(--lf-text);
+}
+
+.sidebar .offcanvas-header {
+  padding: 0.35rem 0.5rem 1.2rem;
+}
+
+.sidebar .brand,
+.site-header .brand {
+  color: var(--lf-text);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.sidebar .brand span,
+.site-header .brand span {
+  color: var(--lf-rose);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  min-width: 0;
+  overflow-y: auto;
+  padding: 0.5rem !important;
+}
+
+.side-link {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: 100%;
+  min-height: 42px;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  color: var(--lf-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.side-link:hover,
+.side-link.active {
+  background: var(--lf-crimson);
+  color: #fff;
+}
+
+.sidebar-note {
+  max-width: 190px;
+  margin: 1.3rem 0.4rem;
+  color: var(--lf-muted);
+  font-size: 0.78rem;
+}
+
+.site-header {
+  position: sticky;
+  z-index: 1020;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 64px;
+  margin: 16px 24px 0 264px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--lf-line);
+  border-radius: 13px;
+  background: var(--lf-card);
+}
+
+.site-header > .brand,
+.site-header nav {
+  display: none;
+}
+
+.site-header .menu-button {
+  display: none;
+}
+
+.site-header .profile {
+  display: grid;
+  flex: 0 0 38px;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--lf-sand);
+  color: #151515;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header .header-label {
+  margin: 0 auto 0 0;
+  color: var(--lf-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  margin-left: 240px;
+  padding: 20px 32px;
+  color: var(--lf-muted);
+}
+
+.site-footer a {
+  color: var(--lf-rose);
+}
+
+@media (max-width: 991.98px) {
+  .sidebar.offcanvas-lg {
+    position: fixed;
+    width: min(280px, 85vw);
+    max-width: min(280px, 85vw);
+    height: 100vh;
+  }
+
+  .site-header {
+    margin: 12px 12px 0;
+  }
+
+  .site-header > .brand,
+  .site-header .menu-button {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-header .menu-button {
+    min-height: 40px;
+  }
+
+  .site-footer {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-height: 58px;
+    margin: 8px 10px 0;
+    padding: 0.45rem;
+  }
+
+  .site-header > .brand {
+    font-size: 1.05rem;
+  }
+
+  .site-header .header-label {
+    font-size: 0.82rem;
+  }
+}

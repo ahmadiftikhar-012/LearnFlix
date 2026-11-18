@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LearnFlix | Learning Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/site-shell.css" />
+    <link rel="stylesheet" href="css/layout-polish.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="icon" href="images/learnflix-mark.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <aside
+      class="sidebar offcanvas-lg offcanvas-start"
+      tabindex="-1"
+      id="learnflixSidebar"
+      aria-label="LearnFlix navigation"
+    >
+      <div class="offcanvas-header">
+        <a class="brand" href="index.html">Learn<span>Flix</span></a
+        ><button
+          type="button"
+          class="btn-close btn-close-white d-lg-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close navigation"
+        ></button>
+      </div>
+      <nav class="sidebar-nav offcanvas-body">
+        <a class="side-link" href="index.html"><span>Home</span></a>
+        <a class="side-link" href="media.html"><span>Browse lessons</span></a>
+        <a class="side-link" href="services.html"
+          ><span>Learning paths</span></a
+        >
+        <a class="side-link active" href="portfolio.html" aria-current="page"
+          ><span>Portfolio</span></a
+        >
+        <a class="side-link" href="contact.html"><span>Contact</span></a>
+        <a class="side-link" href="register.html"><span>Register</span></a>
+        <p class="sidebar-note">A learning library for curious minds</p>
+      </nav>
+    </aside>
+
+    <header class="site-header portfolio-header">
+      <a class="brand" href="index.html" aria-label="LearnFlix home">
+        <img src="images/learnflix-mark.svg" alt="" width="32" height="32" />
+        <span class="brand-learn">Learn</span
+        ><span class="brand-flix">Flix</span>
+      </a>
+      <button
+        class="btn btn-outline-light menu-button d-lg-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#learnflixSidebar"
+        aria-controls="learnflixSidebar"
+      >
+        Menu
+      </button>
+      <p class="header-label">Ideas in progress</p>
+      <a class="profile" href="register.html" aria-label="Open learner profile"
+        >A</a
+      >
+    </header>
+
+    <main class="portfolio-main">
+      <section class="portfolio-intro" aria-labelledby="portfolio-title">
+        <p class="eyebrow">The LearnFlix collection</p>
+        <h1 id="portfolio-title">A closer look at what you can learn.</h1>
+        <p>
+          A small gallery of the subjects and learning experiences available
+          across the library.
+        </p>
+      </section>
+
+      <section class="gallery-grid" aria-label="Learning subject gallery">
+        <figure class="gallery-item gallery-item-featured">
+          <img
+            src="images/learnflix-hero.svg"
+            alt="LearnFlix course player illustration"
+          />
+          <figcaption>
+            <span>01 / THE PLATFORM</span
+            ><strong>Learning, organized in one place</strong>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="images/web-development.svg"
+            alt="Code editor illustration for web development"
+          />
+          <figcaption>
+            <span>02 / CREATE</span><strong>Web development foundations</strong>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="images/data-science.svg"
+            alt="Data visualization illustration"
+          />
+          <figcaption>
+            <span>03 / EXPLORE</span><strong>Data and machine learning</strong>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="images/cyber-security.svg"
+            alt="Digital security shield illustration"
+          />
+          <figcaption>
+            <span>04 / PROTECT</span><strong>Cyber security essentials</strong>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item gallery-item-wide">
+          <img
+            src="images/study-session.svg"
+            alt="Illustration of a learner watching a lesson and taking notes"
+          />
+          <figcaption>
+            <span>05 / KEEP GOING</span
+            ><strong>Short lessons, steady progress</strong>
+          </figcaption>
+        </figure>
+      </section>
+      <p class="gallery-note">
+        Original vector illustrations created for this student project.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>Curiosity is a good place to start.</p>
+      <a href="services.html">Explore learning paths</a>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

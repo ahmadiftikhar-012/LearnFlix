@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Cyber security</title>
+  <desc id="desc">A digital shield and key symbol on a midnight background</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#171727"/><stop offset="1" stop-color="#29141e"/></linearGradient><linearGradient id="shield" x2="0" y2="1"><stop stop-color="#f04c67"/><stop offset="1" stop-color="#8e102c"/></linearGradient></defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <circle cx="480" cy="266" r="205" fill="#c8102e" opacity=".1"/>
+  <path d="M480 105 655 168v115c0 105-72 167-175 210-103-43-175-105-175-210V168z" fill="url(#shield)" stroke="#ff8e9d" stroke-width="5"/>
+  <path d="M480 160 600 203v80c0 74-48 121-120 156-72-35-120-82-120-156v-80z" fill="#171319" opacity=".9"/>
+  <circle cx="458" cy="270" r="38" fill="none" stroke="#e8cfa0" stroke-width="14"/>
+  <path d="M491 296 562 367m-19-19 23-23m-45 2 22-22" stroke="#e8cfa0" stroke-linecap="round" stroke-width="15"/>
+  <path d="M199 149h87M674 391h87M235 396h54M681 155h46" stroke="#ff6b7f" stroke-linecap="round" stroke-width="7" opacity=".6"/>
+</svg>
